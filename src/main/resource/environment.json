@@ -1,0 +1,10 @@
+{
+  "envs": [
+    {
+      "otalioBaseUrl": "https://otalio-ship2-int.msccruises.com",
+      "username": "luigi.durso.consultant@msccrociere.it",
+      "password": "MSC2020@@@",
+      "shipName": "Seashore"
+    }
+  ]
+}
