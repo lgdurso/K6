@@ -7,7 +7,7 @@ import { group } from "k6";
 let login = new Login();
 
 export const options = {
-  vus: 5,
+  vus: 1,
   duration: "10s",
 };
 export function setup() {
@@ -16,4 +16,5 @@ export function setup() {
 
 export default function () {
   let token = login.getToken();
+  console.log('token',token);
 }

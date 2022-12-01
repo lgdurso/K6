@@ -14,11 +14,10 @@ let credentials={"token":"","expiredToken":0};
         "Content-Type": "application/json",
       },
     };
-    this.body = {
+    this.body = JSON.stringify({
       login: getUsername(),
       password: getPassword(),
-    };
-    this.body = JSON.stringify(this.body);
+    });
   }
 
   getLogin() {
@@ -40,7 +39,7 @@ let credentials={"token":"","expiredToken":0};
    getToken() {
     if (credentials.token == null ||credentials.expiredToken==0 || credentials.expiredToken < Date.now()) {
       console.log("Calculate Token");
-      login.getLogin();
+      this.getLogin();
     } 
     return credentials.token;
   }

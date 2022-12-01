@@ -1,0 +1,63 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\admin\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js install
+
+PATH: 
+  C:\Program Files\Microsoft\jdk-11.0.12.7-hotspot\bin;C:\Program Files\Eclipse Foundation\jdk-8.0.302.8-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files (x86)\dotnet\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\admin\AppData\Local\Microsoft\WindowsApps;C:\Users\admin\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\admin\.dotnet\tools;C:\Program Files (x86)\Rico Suter\NSwagStudio\;C:\Users\admin\.dotnet\tools;C:\Users\admin\AppData\Local\Microsoft\WindowsApps;C:\Users\admin\flutter\bin;C:\Users\admin\AppData\Roaming\npm;C:\tools\dart-sdk\bin;C:\Users\admin\AppData\Roaming\Pub\Cache\bin;C:\Users\admin\AppData\Local\Pub\Cache\bin;
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.13.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: ENOSPC: no space left on device, write
+
+npm manifest: 
+  {
+    "name": "k6-arch-example",
+    "version": "0.0.2",
+    "description": "Performance Otalio",
+    "main": "index.js",
+    "scripts": {
+      "pretest": "",
+      "FullFlowLoadTest": "webpack && k6 run dist/FullFlowLoad.test.js",
+      "FullFlowStressTest": "webpack && k6 run  dist/FullFlowStress.test.js",
+      "docker:FullFlowLoadTest": "docker-compose up -d influxdb grafana && webpack && docker-compose run k6 run /dist/FullFlowLoad.test.js",
+      "docker:FullFlowStressTest": "docker-compose up -d influxdb grafana && webpack && docker-compose run k6 run /dist/FullFlowStress.test.js",
+      "docker:up": "docker-compose up -d influxdb grafana",
+      "docker:down": "docker-compose down -v"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/lgdurso/K6.git"
+    },
+    "author": "Luigi D'Urso",
+    "license": "Luigi D'Urso",
+    "bugs": {
+      "url": "https://github.com/maximilianoalves/k6-arch-example/issues"
+    },
+    "homepage": "https://github.com/maximilianoalves/k6-arch-example#readme",
+    "devDependencies": {
+      "webpack-cli": "^4.8.0"
+    },
+    "dependencies": {
+      "@babel/core": "^7.15.0",
+      "@babel/preset-env": "^7.15.0",
+      "babel-loader": "^8.2.2",
+      "casual": "^1.6.2",
+      "core-js": "^3.16.3",
+      "faker": "^5.5.3",
+      "k6": "^0.0.0",
+      "webpack": "^5.51.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
